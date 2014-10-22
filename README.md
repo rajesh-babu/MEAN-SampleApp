@@ -1,7 +1,7 @@
 MEAN-SampleApp
 ==============
 
-Created the sample app that used MEAN stack
+Created the sample app that uses the MEAN stack
 
 download the package and goto the folder in command prompt
 
