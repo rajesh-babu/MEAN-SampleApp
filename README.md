@@ -5,7 +5,7 @@ Created the sample app that uses the MEAN stack
 
 download the package and goto the folder in command prompt
 
-create the folder named "data"
+create the folder named "data" to point out backend data storage path
 
 Install the mongodb and execute the following command to start the mongodb server
 
