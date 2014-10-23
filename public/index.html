@@ -1,13 +1,13 @@
 <html>
 <head>
-  <title>Flapper News</title>
+  <title>MEAN Stack</title>
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-  <script src="javascripts/angularApp.js"></script>
+  <script data-main="javascripts/main" src="javascripts/require.js"></script>
   <style> .glyphicon-thumbs-up { cursor:pointer } </style>
 </head>
-<body ng-app="flapperNews" >
+<body>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
 	  <ui-view></ui-view>
@@ -15,11 +15,11 @@
   </div>
   <script type="text/ng-template" id="/home.html">
 	  <div class="page-header">
-		<h1>Flapper News</h1>
+		<h1>News</h1>
 	  </div>
 	  <div ng-repeat="post in posts | orderBy:'-upvotes'">
-        <span class="glyphicon glyphicon-thumbs-up"
-          ng-click="incrementUpvotes(post)"></span>
+       <span class="glyphicon glyphicon-thumbs-up" tabindex="0"
+          ng-click="incrementUpvotes(post)" utils-keypress></span>
         {{post.upvotes}}
         <span style="font-size:20px; margin-left:10px;">
           <a ng-show="post.link" href="{{post.link}}">
